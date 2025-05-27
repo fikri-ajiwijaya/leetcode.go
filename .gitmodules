@@ -1,3 +1,6 @@
 [submodule ".devcontainer/golang"]
 	path = .devcontainer/golang
 	url = https://github.com/desmond-rhodes/.devcontainer.golang
+[submodule "test"]
+	path = test
+	url = https://github.com/desmond-rhodes/test.go
