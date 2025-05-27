@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Fuzzing",
+			"type": "shell",
+			"command": "${workspaceFolder}/test/task-fuzzing",
+			"args": [
+				"${fileDirname}",
+				"${workspaceFolder}"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": false,
+				"clear": true
+			}
+		}
+	]
+}
