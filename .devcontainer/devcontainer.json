@@ -1,0 +1,13 @@
+{
+	"build": {
+		"dockerfile": "golang/Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.Go",
+				"emeraldwalk.RunOnSave"
+			]
+		}
+	}
+}
