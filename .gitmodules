@@ -1,0 +1,3 @@
+[submodule ".devcontainer/golang"]
+	path = .devcontainer/golang
+	url = https://github.com/desmond-rhodes/.devcontainer.golang
