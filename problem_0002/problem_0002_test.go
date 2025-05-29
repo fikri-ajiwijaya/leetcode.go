@@ -11,7 +11,7 @@ func List_test(t *testing.T, l []int) {
 	result := List_to_Slice(Slice_to_List(l))
 	if !reflect.DeepEqual(l, result) {
 		t.Errorf("l = %#v", l)
-		t.Errorf("Expected: l = List_to_Slice(Slice_to_List(l))")
+		t.Errorf("Expected: l == List_to_Slice(Slice_to_List(l))")
 		t.Errorf("Found: %#v", result)
 	}
 }
