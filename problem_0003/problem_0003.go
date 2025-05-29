@@ -1,31 +1,22 @@
 package problem_0003
 
-func HasDuplicate(s string) bool {
-	rs := []rune(s)
-	encountered := map[rune]bool{}
-	for _, r := range rs {
-		_, found := encountered[r]
-		if found {
-			return true
-		}
-		encountered[r] = true
-	}
-	return false
-}
-
 func LengthOfLongestSubstring(s string) int {
 	return lengthOfLongestSubstring(s)
 }
 
 func lengthOfLongestSubstring(s string) int {
 	max_length := 0
-	for i := 0; i < len(s); i++ {
-		for j := len(s); j > i; j-- {
-			if !HasDuplicate(s[i:j]) {
-				if len(s[i:j]) > max_length {
-					max_length = len(s[i:j])
-				}
-			}
+	pos := map[rune]int{}
+	beg := 0
+	for i, r := range s {
+		loc, found := pos[r]
+		if found && loc >= beg {
+			beg = loc + 1
+		}
+		pos[r] = i
+		length := i + 1 - beg
+		if length > max_length {
+			max_length = length
 		}
 	}
 	return max_length
